@@ -70,7 +70,7 @@ resource "aws_instance" "cloud_2023" {
 
   ami           = var.ami["us-east-1"]
   instance_type = var.instance_types[0]
-  key_name      = var.key_name
+  # key_name      = var.key_name
   subnet_id              = aws_subnet.main.id
   #vpc_security_group_ids = [module.security_groups.security_group_id["cloud_2023_sg"]] 
   vpc_security_group_ids = [aws_security_group.default["cloud_2023_sg"].id ]
