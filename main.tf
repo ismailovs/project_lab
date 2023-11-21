@@ -1,6 +1,6 @@
 resource "aws_key_pair" "cloud_2023" {
   key_name   = var.key_name
-  public_key = file("~/.ssh/id_ed25519.pub")
+  public_key = file("~/.ssh/cloud2024.pem.pub")
 }
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.main.id

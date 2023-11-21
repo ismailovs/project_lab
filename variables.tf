@@ -14,7 +14,7 @@ variable "instance_types" {
 
 variable "key_name" {
     type = string
-    default = ""
+    default = "cloud2023"
 
 }
 variable "security_groups" {
