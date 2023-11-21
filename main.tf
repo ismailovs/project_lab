@@ -30,7 +30,7 @@ resource "aws_route_table_association" "a" {
 resource "aws_eip" "cloud_2023" {
   instance = aws_instance.cloud_2023.id
   domain   = "vpc"
-  depends_on                = [aws_internet_gateway.gw]
+  # depends_on                = [aws_internet_gateway.gw]
 }
 
 resource "aws_security_group" "default" {
