@@ -96,3 +96,7 @@ resource "aws_subnet" "main" {
     Name = "cloud_2023"
   }
 }
+import {  
+  to = aws_instance.cloud_2023
+  id = "i-0ff84785c4dad6310"
+  }
