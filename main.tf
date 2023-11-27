@@ -1,6 +1,6 @@
 resource "aws_key_pair" "cloud_2023" {
   key_name   = var.key_name
-  public_key = file("~/.ssh/cloud2024.pem.pub")
+  public_key = file("~/.ssh/cloud_2024.pem.pub")
 }
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.main.id
@@ -96,7 +96,8 @@ resource "aws_subnet" "main" {
     Name = "cloud_2023"
   }
 }
+
 import {  
   to = aws_instance.cloud_2023
-  id = "i-0ff84785c4dad6310"
+  id = "i-0bc692e93cbcedb6c"
   }
